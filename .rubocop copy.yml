@@ -1,0 +1,265 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rake
+
+
+AllCops:
+  TargetRubyVersion: 3.2.2
+  NewCops: enable
+  Exclude:
+    - "bin/**/*"
+    - "db/schema.rb"
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/TernaryParentheses:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 155
+  Exclude:
+    - "spec/**/*.rb"
+
+Layout/ArgumentAlignment:
+  Enabled: true
+
+Layout/ArrayAlignment:
+  Enabled: true
+
+Layout/BlockAlignment:
+  Enabled: true
+
+Style/BlockDelimiters:
+  Enabled: true
+
+Layout/BlockEndNewline:
+  Enabled: true
+
+Layout/ClosingParenthesisIndentation:
+  Enabled: true
+
+Layout/FirstArgumentIndentation:
+  Enabled: true
+
+Layout/FirstArrayElementIndentation:
+  Enabled: true
+
+Layout/FirstHashElementIndentation:
+  Enabled: true
+
+Layout/FirstParameterIndentation:
+  Enabled: true
+
+Layout/HashAlignment:
+  Enabled: true
+
+Layout/IndentationWidth:
+  Enabled: true
+
+Layout/MultilineArrayLineBreaks:
+  Enabled: true
+
+Layout/MultilineBlockLayout:
+  Enabled: true
+
+Layout/MultilineHashBraceLayout:
+  Enabled: true
+
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: true
+
+Layout/MultilineMethodParameterLineBreaks:
+  Enabled: true
+
+Layout/ParameterAlignment:
+  Enabled: true
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Lint/UselessRescue:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Style/OpenStructUse:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+RSpec/SpecFilePathFormat:
+  Enabled: false
+
+RSpec/BeforeAfterAll:
+  Enabled: false
+
+RSpec/DescribedClass:
+  Enabled: false
+
+RSpec/InstanceVariable:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/PredicateMatcher:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Style/MultilineTernaryOperator:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Naming/PredicateName:
+  # Method define macros for dynamically generated method.
+  MethodDefinitionMacros:
+    - define_method
+    - define_singleton_method
+    - def_node_matcher
+    - def_node_search
+
+Lint/UselessAccessModifier:
+  MethodCreatingMethods:
+    - "def_matcher"
+    - "def_node_matcher"
+
+Naming/InclusiveLanguage:
+  Enabled: true
+  CheckStrings: true
+  FlaggedTerms:
+    auto-correct:
+      Suggestions:
+        - autocorrect
+    auto_correct:
+      Suggestions:
+        - autocorrect
+    offence:
+      Suggestions:
+        - offense
+  Exclude:
+    - spec/rubocop/cop/naming/inclusive_language_spec.rb
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+
+RSpec/NestedGroups:
+  Max: 7
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/RepeatedDescription:
+  Enabled: false
+
+RSpec/RepeatedExampleGroupBody:
+  Enabled: false
+
+Lint/SuppressedException:
+  Enabled: false
+
+RSpecRails/InferredSpecType:
+  Enabled: false
+
+RSpec/ExampleWording:
+  Enabled: false
+
+RSpec/HookArgument:
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+Performance/CollectionLiteralInLoop:
+  Exclude:
+    - "Rakefile"
+    - "spec/**/*.rb"
+
+Performance/EndWith:
+  SafeMultiline: false
+
+Performance/StartWith:
+  SafeMultiline: false
+
+RSpec/StubbedMock:
+  Enabled: false
+
+Gemspec/DependencyVersion:
+  Enabled: true
+
