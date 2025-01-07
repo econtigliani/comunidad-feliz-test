@@ -29,6 +29,8 @@ module AccessMarketApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    config.active_support.to_time_preserves_timezone = :zone
+
     # Set session store for sidekiq
     config.session_store :cookie_store, key: "_interslice_session"
     config.middleware.use ActionDispatch::Cookies
