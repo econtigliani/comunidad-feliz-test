@@ -1,0 +1,4 @@
+default: &default
+  email_regex: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+  number_regex: /\A[1-9]\d*\z/
+  subdomain_regex:  /\A[a-z0-9][a-z0-9\-]*[a-z0-9]\z/
